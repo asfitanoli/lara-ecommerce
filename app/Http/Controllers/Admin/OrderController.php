@@ -31,7 +31,7 @@ class OrderController extends Controller
         if (in_array('Customer', $roles)) {
             $userId = auth()->user()->id;
 
-            $order = Order::where('user_id', '=', $userId)->where('id', '=', $userId)->first();
+            $order = Order::where('user_id', '=', $userId)->where('id', '=', $id)->first();
 
         } else {
 

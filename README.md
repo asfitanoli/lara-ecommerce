@@ -1,39 +1,76 @@
 ## About Lara eCommerce
 
-Developed by Asfandyar Khan
+Developed by Asfandyar Khan locally using WAMP server environment.
 
 ## Steps to Run
 
-- First run composer install
+- First run composer command 
+```
+  composer install
+```
+- Copy env example file using command 
+```
+cp .env.example .env
+```
+- I am using MailTrap for sending emails. In .env my credentials are used for interview assignment which will not work after 2-3 days. You can use yours in the future, I will update the project later on.
+- If you're not receiving email, please create your account on mailtrap using below link, You will receive email on mailtrap as well.
+```
+https://mailtrap.io/
+```
+- Don't forget to create a Database (Update db info in .env) and Run Migrations using below command
+```
+php artisan migrate
+```
+- Run below two seeders for dummy data. It will create admin user and add 4 products.
+```
+php artisan db:seed --class=AdminUserSeeder
+php artisan db:seed --class=ProductSeeder
+```
+- Run below command
+```
+php artisan serve
+```
+- That's it. Now You can register yourself, you will be customer.
+- For admin, use below credentials
+```
+email: aasfandyark90@gmail.com
+pass: admin!@#
+```
 
-### Premium Partners
+Project is made for assignment purpose in 2 days. it uses free html ecommerce template and inspinia admin template.
+In the future, I will update this project with more and detail features including design.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+I have followed the project table described in the assignment. You don't have option to create categories for project. Categories are hardcoded in the Defs Trait. You can add more categories from there for now. But i would suggest to use different table for categories and different table for product images.
 
-## Contributing
+It uses below package for cart functionality. Checkout feature is custom one.
+```https://github.com/darryldecode/laravelshoppingcart```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+All features can have more functionality like a proper ecommerce website with more database tables and more columns in some tables. I have used minimum functionality.
 
-## Code of Conduct
+P.S Ignore the front-end ecommerce theme design. I would like to use a better purchased theme for it in the near future.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Current Features
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Home Page
+- Product Page with category
+- Product detail page
+- cart page
+- order placement and thank you page
+- login and sign up page
+- Dashboard for admin / customers
 
-## License
+## Admin
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Admin can add, update products.
+- Admin can view orders, approve orders.
+- Admin can see all registered customers.
+
+## Customer
+- In Customer dashboard, He can view all his orders.
+
+
+
+
+
+
