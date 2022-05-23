@@ -71,7 +71,7 @@
                                                             <div class="col-md-12">
                                                                 <div class="aa-checkout-single-bill">
                                                                         <textarea cols="8" rows="3"
-                                                                                  name="billing_address" required>Address*</textarea>
+                                                                                  name="billing_address" placeholder="Address*" required></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
