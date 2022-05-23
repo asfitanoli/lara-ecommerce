@@ -2,6 +2,11 @@
 
 Developed by Asfandyar Khan locally using WAMP server environment.
 
+- Laravel Version: 8
+- PHP Version: 8.1
+- Apache Version: 2.4
+- MariaDB Version: 10 (Port 3307 (Localhost Wamp))
+
 ## Steps to Run
 
 - First run composer command 
